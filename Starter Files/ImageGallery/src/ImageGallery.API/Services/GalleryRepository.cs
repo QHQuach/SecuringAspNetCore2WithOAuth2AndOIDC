@@ -11,33 +11,41 @@ namespace ImageGallery.API.Services
 
         public GalleryRepository(GalleryContext galleryContext)
         {
-            _context = galleryContext;
+            this._context = galleryContext;
         }
+
         public bool ImageExists(Guid id)
         {
-            return _context.Images.Any(i => i.Id == id);
-        }       
+            return this._context.Images.Any(i => i.Id == id);
+        }
 
         public Image GetImage(Guid id)
         {
-            return _context.Images.FirstOrDefault(i => i.Id == id);
+            return this._context.Images.FirstOrDefault(i => i.Id == id);
         }
-  
+
         public IEnumerable<Image> GetImages()
         {
-            return _context.Images
+            return this._context.Images
+                .OrderBy(i => i.Title).ToList();
+        }
+
+        public IEnumerable<Image> GetImages(string ownerId)
+        {
+            return this._context.Images
+                .Where(i => i.OwnerId == ownerId)
                 .OrderBy(i => i.Title).ToList();
         }
 
         public bool IsImageOwner(Guid id, string ownerId)
         {
-            return _context.Images.Any(i => i.Id == id && i.OwnerId == ownerId);
+            return this._context.Images.Any(i => i.Id == id && i.OwnerId == ownerId);
         }
 
 
         public void AddImage(Image image)
         {
-            _context.Images.Add(image);
+            this._context.Images.Add(image);
         }
 
         public void UpdateImage(Image image)
@@ -47,9 +55,9 @@ namespace ImageGallery.API.Services
 
         public void DeleteImage(Image image)
         {
-            _context.Images.Remove(image);
+            this._context.Images.Remove(image);
 
-            // Note: in a real-life scenario, the image itself should also 
+            // Note: in a real-life scenario, the image itself should also
             // be removed from disk.  We don't do this in this demo
             // scenario, as we refill the DB with image URIs (that require
             // the actual files as well) for demo purposes.
@@ -57,12 +65,12 @@ namespace ImageGallery.API.Services
 
         public bool Save()
         {
-            return (_context.SaveChanges() >= 0);
+            return (this._context.SaveChanges() >= 0);
         }
 
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
@@ -70,13 +78,13 @@ namespace ImageGallery.API.Services
         {
             if (disposing)
             {
-                if (_context != null)
+                if (this._context != null)
                 {
-                    _context.Dispose();
-                    _context = null;
+                    this._context.Dispose();
+                    this._context = null;
                 }
 
             }
-        }     
+        }
     }
 }

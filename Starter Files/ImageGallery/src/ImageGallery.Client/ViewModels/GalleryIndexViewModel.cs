@@ -10,7 +10,7 @@ namespace ImageGallery.Client.ViewModels
 
         public GalleryIndexViewModel(List<Image> images)
         {
-           Images = images;
+            this.Images = images;
         }
     }
 }

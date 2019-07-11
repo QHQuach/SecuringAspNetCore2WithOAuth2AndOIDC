@@ -4,3 +4,12 @@
 
 /Starter Files/ImageGallery/.vs/ImageGallery/v15
 /.vs/SecuringAspNetCore2WithOAuth2AndOIDC/v15
+/Starter Files/ImageGallery/src/ImageGallery.Client/obj
+/Starter Files/ImageGallery/src/ImageGallery.Client/bin/Debug
+/Starter Files/ImageGallery/src/ImageGallery.API/bin/Debug
+/Starter Files/ImageGallery/src/ImageGallery.API/obj
+/Starter Files/ImageGallery/src/ImageGallery.Model/bin/Debug
+/Starter Files/ImageGallery/src/ImageGallery.Model/obj
+/Starter Files/ImageGallery/src/Marvin.IDP/bin/Debug/netcoreapp2.2
+/Starter Files/ImageGallery/src/Marvin.IDP/obj
+/Starter Files/ImageGallery/.vs/Marvin.IDP/v15

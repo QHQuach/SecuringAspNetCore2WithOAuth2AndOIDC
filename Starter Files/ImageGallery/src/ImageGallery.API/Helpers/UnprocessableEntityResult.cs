@@ -4,16 +4,18 @@ using System;
 
 namespace ImageGallery.API.Helpers
 {
-    public class UnprocessableEntityObjectResult : ObjectResult
-    {
-        public UnprocessableEntityObjectResult(ModelStateDictionary modelState)
-            : base(new SerializableError(modelState))
-        {
-            if (modelState == null)
-            {
-                throw new ArgumentNullException(nameof(modelState));
-            }
-            StatusCode = 422;
-        }
-    }
+    // QQHQ :: Is now part of Microsoft.AspNetCore.All 2.2.0+
+    //public class UnprocessableEntityObjectResult : ObjectResult
+    //{
+    //    public UnprocessableEntityObjectResult(ModelStateDictionary modelState)
+    //        : base(new SerializableError(modelState))
+    //    {
+    //        if (modelState == null)
+    //        {
+    //            throw new ArgumentNullException(nameof(modelState));
+    //        }
+
+    //        this.StatusCode = 422;
+    //    }
+    //}
 }

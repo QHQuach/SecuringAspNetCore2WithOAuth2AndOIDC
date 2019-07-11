@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ImageGallery.API.Entities
 {
+    /// <summary>
+    /// QQHQ :: This is only for DB ops. No serialization over the wire.
+    /// Client should use different entity for serializing the result data.
+    /// </summary>
     public class Image
     {
         [Key]

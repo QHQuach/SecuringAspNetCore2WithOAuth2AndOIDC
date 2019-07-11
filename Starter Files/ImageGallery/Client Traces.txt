@@ -1,0 +1,981 @@
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: An 'IServiceProvider' was created for internal use by Entity Framework.
+Microsoft.EntityFrameworkCore.Infrastructure:Information: Entity Framework Core 2.2.3-servicing-35854 initialized 'GalleryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Migrations:Debug: Migrating using database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Information: User profile is available. Using 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 DEBUG http://localhost:44393/  0
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 28.9244ms 200
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Migrations:Information: No migrations were applied. The database is already up to date.
+Microsoft.EntityFrameworkCore.Query:Debug: Compiling query model:
+'from Image <generated>_0 in DbSet<Image>
+select [<generated>_0]'
+Microsoft.EntityFrameworkCore.Query:Debug: Optimized query model:
+'from Image <generated>_0 in DbSet<Image>
+select [<generated>_0]'
+Microsoft.EntityFrameworkCore.Query:Debug: (QueryContext queryContext) => IEnumerable<Image> _InterceptExceptions(
+|__ source: IEnumerable<Image> _TrackEntities(
+|   |__ results: IEnumerable<Image> _ShapedQuery(
+|   |   |__ queryContext: queryContext,
+|   |   |__ shaperCommandContext: SelectExpression:
+|   |   |       SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+|   |   |       FROM [Images] AS [i],
+|   |   |__ shaper: (MaterializationContext materializationContext) =>
+|   |       {
+|   |           instance = new Image()
+|   |           instance.<Id>k__BackingField = Guid TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Image.Id)
+|   |           instance.<FileName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Image.FileName)
+|   |           instance.<OwnerId>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Image.OwnerId)
+|   |           instance.<Title>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, Image.Title)
+|   |           return instance
+|   |       }),
+|   |__ queryContext: queryContext,
+|   |__ entityTrackingInfos: { itemType: Image },
+|   |__ entityAccessors: List<Func<Image, object>>
+|       {
+|           Func<Image, Image>,
+|       }),
+|__ contextType: ImageGallery.API.Entities.GalleryContext,
+|__ logger: DiagnosticsLogger<Query>,
+|__ queryContext: queryContext)
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges completed for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Beginning transaction with isolation level 'ReadCommitted'.
+Microsoft.EntityFrameworkCore.Update:Debug: Executing 14 update commands as a batch.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Guid), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (DbType = Guid), @p12='?' (DbType = Guid), @p13='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Images]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p12;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Guid), @p8='?' (DbType = Guid), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (DbType = Guid), @p12='?' (DbType = Guid), @p13='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Images]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p12;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Images]
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Committing transaction.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Disposing transaction.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges completed for 'GalleryContext' with 14 entities written to the database.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges completed for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Beginning transaction with isolation level 'ReadCommitted'.
+Microsoft.EntityFrameworkCore.Update:Debug: Executing 14 update commands as a batch.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 50), @p3='?' (Size = 150), @p4='?' (DbType = Guid), @p5='?' (Size = 200), @p6='?' (Size = 50), @p7='?' (Size = 150), @p8='?' (DbType = Guid), @p9='?' (Size = 200), @p10='?' (Size = 50), @p11='?' (Size = 150), @p12='?' (DbType = Guid), @p13='?' (Size = 200), @p14='?' (Size = 50), @p15='?' (Size = 150), @p16='?' (DbType = Guid), @p17='?' (Size = 200), @p18='?' (Size = 50), @p19='?' (Size = 150), @p20='?' (DbType = Guid), @p21='?' (Size = 200), @p22='?' (Size = 50), @p23='?' (Size = 150), @p24='?' (DbType = Guid), @p25='?' (Size = 200), @p26='?' (Size = 50), @p27='?' (Size = 150), @p28='?' (DbType = Guid), @p29='?' (Size = 200), @p30='?' (Size = 50), @p31='?' (Size = 150), @p32='?' (DbType = Guid), @p33='?' (Size = 200), @p34='?' (Size = 50), @p35='?' (Size = 150), @p36='?' (DbType = Guid), @p37='?' (Size = 200), @p38='?' (Size = 50), @p39='?' (Size = 150), @p40='?' (DbType = Guid), @p41='?' (Size = 200), @p42='?' (Size = 50), @p43='?' (Size = 150), @p44='?' (DbType = Guid), @p45='?' (Size = 200), @p46='?' (Size = 50), @p47='?' (Size = 150), @p48='?' (DbType = Guid), @p49='?' (Size = 200), @p50='?' (Size = 50), @p51='?' (Size = 150), @p52='?' (DbType = Guid), @p53='?' (Size = 200), @p54='?' (Size = 50), @p55='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [FileName], [OwnerId], [Title])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27),
+(@p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35),
+(@p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51),
+(@p52, @p53, @p54, @p55);
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 50), @p3='?' (Size = 150), @p4='?' (DbType = Guid), @p5='?' (Size = 200), @p6='?' (Size = 50), @p7='?' (Size = 150), @p8='?' (DbType = Guid), @p9='?' (Size = 200), @p10='?' (Size = 50), @p11='?' (Size = 150), @p12='?' (DbType = Guid), @p13='?' (Size = 200), @p14='?' (Size = 50), @p15='?' (Size = 150), @p16='?' (DbType = Guid), @p17='?' (Size = 200), @p18='?' (Size = 50), @p19='?' (Size = 150), @p20='?' (DbType = Guid), @p21='?' (Size = 200), @p22='?' (Size = 50), @p23='?' (Size = 150), @p24='?' (DbType = Guid), @p25='?' (Size = 200), @p26='?' (Size = 50), @p27='?' (Size = 150), @p28='?' (DbType = Guid), @p29='?' (Size = 200), @p30='?' (Size = 50), @p31='?' (Size = 150), @p32='?' (DbType = Guid), @p33='?' (Size = 200), @p34='?' (Size = 50), @p35='?' (Size = 150), @p36='?' (DbType = Guid), @p37='?' (Size = 200), @p38='?' (Size = 50), @p39='?' (Size = 150), @p40='?' (DbType = Guid), @p41='?' (Size = 200), @p42='?' (Size = 50), @p43='?' (Size = 150), @p44='?' (DbType = Guid), @p45='?' (Size = 200), @p46='?' (Size = 50), @p47='?' (Size = 150), @p48='?' (DbType = Guid), @p49='?' (Size = 200), @p50='?' (Size = 50), @p51='?' (Size = 150), @p52='?' (DbType = Guid), @p53='?' (Size = 200), @p54='?' (Size = 50), @p55='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [FileName], [OwnerId], [Title])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27),
+(@p28, @p29, @p30, @p31),
+(@p32, @p33, @p34, @p35),
+(@p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51),
+(@p52, @p53, @p54, @p55);
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Committing transaction.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Disposing transaction.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges completed for 'GalleryContext' with 14 entities written to the database.
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: 'GalleryContext' disposed.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Debug: Hosting starting
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Information: User profile is available. Using 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-04e99a5d-c117-479a-8e3f-54fbff3edf13.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-0ea3bf13-53e1-43fc-99d9-ff1ef04e73a5.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-28edfd9a-af8e-42eb-9756-9ae98ed4dd2d.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-3f5d254a-f8a1-4236-94c5-45626d5198cd.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-474f89fd-dffc-4eed-a3ac-9cf491362bce.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-57150470-f493-4f38-a1fa-62363424621f.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-5b9ec17e-c355-4fe7-a825-16125f402314.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-79d5e376-3a26-4152-95e0-08223be5e69d.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-857c8aef-bdf3-40d8-af31-ea1387e3dacd.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-9004e1d7-ca3a-4b41-8894-6e960ebcff3e.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-92280c87-7476-4c71-868e-e192826265ea.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-bb2a2178-4c0d-486d-8e7f-f67cb9a7b1cb.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-d9561bcc-9333-4bc7-8f34-b1f4c202f524.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-ed05c11a-e511-4812-8c3b-0c28fddd745f.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-f28da957-e3c8-4239-9c33-3f9b7e59db86.xml'.
+Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository:Debug: Reading data from file 'C:\Users\Quang.Quach\AppData\Local\ASP.NET\DataProtection-Keys\key-f6cbe82e-78b1-46f8-ad19-074aef78a22b.xml'.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {04e99a5d-c117-479a-8e3f-54fbff3edf13}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {0ea3bf13-53e1-43fc-99d9-ff1ef04e73a5}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {28edfd9a-af8e-42eb-9756-9ae98ed4dd2d}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {3f5d254a-f8a1-4236-94c5-45626d5198cd}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {474f89fd-dffc-4eed-a3ac-9cf491362bce}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {57150470-f493-4f38-a1fa-62363424621f}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {5b9ec17e-c355-4fe7-a825-16125f402314}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {79d5e376-3a26-4152-95e0-08223be5e69d}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {857c8aef-bdf3-40d8-af31-ea1387e3dacd}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {9004e1d7-ca3a-4b41-8894-6e960ebcff3e}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {92280c87-7476-4c71-868e-e192826265ea}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {bb2a2178-4c0d-486d-8e7f-f67cb9a7b1cb}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {d9561bcc-9333-4bc7-8f34-b1f4c202f524}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {ed05c11a-e511-4812-8c3b-0c28fddd745f}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {f28da957-e3c8-4239-9c33-3f9b7e59db86}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager:Debug: Found key {f6cbe82e-78b1-46f8-ad19-074aef78a22b}.
+Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver:Debug: Considering key {bb2a2178-4c0d-486d-8e7f-f67cb9a7b1cb} with expiration date 2019-08-15 16:00:23Z as default key.
+Microsoft.AspNetCore.DataProtection.TypeForwardingActivator:Debug: Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor:Debug: Decrypting secret element using Windows DPAPI.
+Microsoft.AspNetCore.DataProtection.TypeForwardingActivator:Debug: Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory:Debug: Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory:Debug: Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider:Debug: Using key {bb2a2178-4c0d-486d-8e7f-f67cb9a7b1cb} as the default key.
+Microsoft.AspNetCore.DataProtection.Internal.DataProtectionStartupFilter:Debug: Key ring with default key {bb2a2178-4c0d-486d-8e7f-f67cb9a7b1cb} was loaded during application startup.
+Microsoft.AspNetCore.Mvc.MvcJsonOptions:Debug: Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using default value AllExceptions
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch EnableEndpointRouting in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch MaxValidationDepth in type MvcOptions is using default value (null)
+Microsoft.AspNetCore.Mvc.MvcOptions:Debug: Compatibility switch AllowShortCircuitingValidationWhenNoValidatorsArePresent in type MvcOptions is using default value False
+Microsoft.AspNetCore.Mvc.ApiBehaviorOptions:Debug: Compatibility switch SuppressMapClientErrors in type ApiBehaviorOptions is using compatibility value True for version Version_2_0
+Microsoft.AspNetCore.Mvc.ApiBehaviorOptions:Debug: Compatibility switch SuppressUseValidationProblemDetailsForInvalidModelStateResponses in type ApiBehaviorOptions is using compatibility value True for version Version_2_0
+Microsoft.AspNetCore.Mvc.ApiBehaviorOptions:Debug: Compatibility switch AllowInferringBindingSourceForCollectionTypesAsFromQuery in type ApiBehaviorOptions is using compatibility value True for version Version_2_0
+Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions:Debug: Compatibility switch AllowAreas in type RazorPagesOptions is using default value False
+Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions:Debug: Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using default value False
+Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions:Debug: Compatibility switch AllowDefaultHandlingForOptionsRequests in type RazorPagesOptions is using default value False
+Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions:Debug: Compatibility switch AllowRecompilingViewsOnFileChange in type RazorViewEngineOptions is using explicitly configured value True
+Microsoft.AspNetCore.Mvc.MvcViewOptions:Debug: Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using default value False
+Microsoft.AspNetCore.Mvc.MvcViewOptions:Debug: Compatibility switch AllowRenderingMaxLengthAttribute in type MvcViewOptions is using default value False
+Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory:Debug: Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider
+Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer:Debug: Failed to locate the development https certificate at '(null)'.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Debug: Hosting started
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Debug: Loaded hosting startup assembly ImageGallery.API
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Debug: Loaded hosting startup assembly Microsoft.AspNetCore.Server.IISIntegration
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" started.
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 DEBUG http://localhost:44329/  0
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Debug: Wildcard detected, all requests with hosts will be allowed.
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Trace: All hosts are allowed.
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" completed keep alive response.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 34.5588ms 200
+
+
+QQHQ :: STARTED...REQUEST HOME PAGE
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "Index", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization failed.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+Microsoft.AspNetCore.Mvc.ChallengeResult:Information: Executing ChallengeResult with authentication schemes ().
+Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler:Information: AuthenticationScheme: oidc was challenged.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) in 581.6931ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 852.5325ms 302
+
+QQHQ :: REDIRECTED TO LOGIN PAGE....*RETURN FROM LOGIN
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 POST http://localhost:44393/signin-oidc application/x-www-form-urlencoded 1595
+Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler:Information: AuthenticationScheme: Cookies signed in.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 393.1487ms 302
+
+QQHQ :: *REDIRECT BACK TO HOME
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "Index", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) - Validation state: Valid
+================================ OIDC IDENTITY TOKEN INFO ======================================
+Identity token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjAzOGRiNTljYmM4ZDAxOWI1MjQ1YzNhODIzYWM5MTg3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NTkyNDg3ODUsImV4cCI6MTU1OTI0OTA4NSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMTQiLCJhdWQiOiJpbWFnZWdhbGxlcnljbGllbnQiLCJub25jZSI6IjYzNjk0ODQ1NTY2MTk3MTEzMS5PRGxpTlRnd01XTXRPRE15TXkwMFlUZGtMVGc1WVRjdFpqTXlOekk1TXpZMlpHUXpZekV5WXpFNE1EZ3RNamswWXkwME1qbG1MV0ZtWm1NdE1XRTNaalZtTW1Vek9UVm0iLCJpYXQiOjE1NTkyNDg3ODUsImF0X2hhc2giOiJxU21pb2ZsUWwxVThhamczZFJXd0ZRIiwic2lkIjoiYWI5NDJhZmYyMzc2NDkzOGE0NmI0ZjljZTY5ZjhhODgiLCJzdWIiOiJiNzUzOTY5NC05N2U3LTRkZmUtODRkYS1iNDI1NmUxZmY1YzciLCJhdXRoX3RpbWUiOjE1NTkyNDg3NzksImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.m2F7QJXtWVbhQzQLp4p-oPT2q9-BEgm9vRqW67hLjKrLC38vvoIQGZseqxi-YtoBPkr8Z0eIHSjD8GQXLMKpvQu8UTSj-Tslwi6i6dMBP95NWbJMyoSnrrJNbOf_Wr97mztuD6dArskLNoQQ1wecS3gQFpC2-q68kR7_rfoWMJJkcvgHQtjIT8S6zIsOOW0p1OZqp8mtwSOQajorQxVEM0Yt2nYAE5pSFO9Wm-nWLTHuG6KHkAuqSmTnzY99l40WSnulEeq92vjQg4uWvRs3mtcYO9VKHfWadn6QheGBK27toR_QbKQggTSisUK_2WX5mXgYJtuutqisPp7EgJ2awg
+Claim type: sub - Claim value: b7539694-97e7-4dfe-84da-b4256e1ff5c7
+Claim type: amr - Claim value: pwd
+Claim type: given_name - Claim value: Claire
+Claim type: family_name - Claim value: Underwood
+Claim type: role - Claim value: PayingUser
+Claim type: country - Claim value: be
+Claim type: subscriptionlevel - Claim value: PayingUser
+================================ OIDC IDENTITY TOKEN INFO ======================================
+
+QQHQ :: API :: GET IMAGES
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44329/api/images
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Trace: All hosts are allowed.
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware:Debug: The request path /api/images does not match a supported file type
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: HandleAuthenticateAsync called
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token found: 0b81931232f3f7e27d1d927de97cfcbfb3f8f574fb6d4a2cf78d256565eb0994
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token is a reference token and is supported.
+IdentityModel.AspNetCore.OAuth2Introspection.OAuth2IntrospectionHandler:Debug: AuthenticationScheme: BearerIdentityServerAuthenticationIntrospection was successfully authenticated.
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Debug: AuthenticationScheme: Bearer was successfully authenticated.
+Microsoft.AspNetCore.Routing.Tree.TreeRouter:Debug: Request successfully matched the route with name '(null)' and template 'api/images'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.CreateImage (ImageGallery.API)' with id '5fb89cc3-8714-49c9-9e26-bd85c57e4818' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "GetImages", controller = "Images"}. Executing action ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of authorization filters (in the following order): Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of exception filters (in the following order): None
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API) - Validation state: Valid
+Microsoft.EntityFrameworkCore.Infrastructure:Information: Entity Framework Core 2.2.3-servicing-35854 initialized 'GalleryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Query:Debug: Compiling query model:
+'from Image i in DbSet<Image>
+where [i].OwnerId == __ownerId_0
+order by [i].Title asc
+select [i]'
+Microsoft.EntityFrameworkCore.Query:Debug: Optimized query model:
+'from Image i in DbSet<Image>
+where [i].OwnerId == __ownerId_0
+order by [i].Title asc
+select [i]'
+Microsoft.EntityFrameworkCore.Query:Debug: (QueryContext queryContext) => IEnumerable<Image> _InterceptExceptions(
+|__ source: IEnumerable<Image> _TrackEntities(
+|   |__ results: IEnumerable<Image> _ShapedQuery(
+|   |   |__ queryContext: queryContext,
+|   |   |__ shaperCommandContext: SelectExpression:
+|   |   |       SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+|   |   |       FROM [Images] AS [i]
+|   |   |       WHERE [i].[OwnerId] = @__ownerId_0
+|   |   |       ORDER BY [i].[Title],
+|   |   |__ shaper: (MaterializationContext materializationContext) =>
+|   |       {
+|   |           instance = new Image()
+|   |           instance.<Id>k__BackingField = Guid TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Image.Id)
+|   |           instance.<FileName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Image.FileName)
+|   |           instance.<OwnerId>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Image.OwnerId)
+|   |           instance.<Title>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, Image.Title)
+|   |           return instance
+|   |       }),
+|   |__ queryContext: queryContext,
+|   |__ entityTrackingInfos: { itemType: Image },
+|   |__ entityAccessors: List<Func<Image, object>>
+|       {
+|           Func<Image, Image>,
+|       }),
+|__ contextType: ImageGallery.API.Entities.GalleryContext,
+|__ logger: DiagnosticsLogger<Query>,
+|__ queryContext: queryContext)
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__ownerId_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[OwnerId] = @__ownerId_0
+ORDER BY [i].[Title]
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (77ms) [Parameters=[@__ownerId_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[OwnerId] = @__ownerId_0
+ORDER BY [i].[Title]
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 226.3631ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Attempting to select an output formatter based on Accept header 'application/json'.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor:Information: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ImageGallery.Model.Image, ImageGallery.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API) in 416.7562ms
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" completed keep alive response.
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: 'GalleryContext' disposed.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 1403.0987ms 200 application/json; charset=utf-8
+
+QQHQ :: *RENDER HOME PAGE
+
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1442.1898ms.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executing ViewResult, running view Index.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executed ViewResult - view Index executed in 134.3995ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) in 1607.8365ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 1620.7184ms 200 text/html; charset=utf-8
+
+QQHQ :: HOME PAGE SHOWN...EDIT IMAGE
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/Gallery/EditImage/2645bd94-3624-43fc-b21f-1209d730fc71
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "EditImage", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client) with arguments (2645bd94-3624-43fc-b21f-1209d730fc71) - Validation state: Valid
+
+QQHQ :: API :: GET IMAGES BY ID
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44329/api/images/2645bd94-3624-43fc-b21f-1209d730fc71
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Trace: All hosts are allowed.
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware:Debug: The request path /api/images/2645bd94-3624-43fc-b21f-1209d730fc71 does not match a supported file type
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: HandleAuthenticateAsync called
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token found: 0b81931232f3f7e27d1d927de97cfcbfb3f8f574fb6d4a2cf78d256565eb0994
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token is a reference token and is supported.
+IdentityModel.AspNetCore.OAuth2Introspection.OAuth2IntrospectionHandler:Debug: AuthenticationScheme: BearerIdentityServerAuthenticationIntrospection was successfully authenticated.
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Debug: AuthenticationScheme: Bearer was successfully authenticated.
+Microsoft.AspNetCore.Routing.Tree.TreeRouter:Debug: Request successfully matched the route with name 'GetImage' and template 'api/images/{id}'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.DeleteImage (ImageGallery.API)' with id 'f4aa5060-4df7-415a-9821-60ef432ca5e5' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.UpdateImage (ImageGallery.API)' with id 'b79f73bb-6d9e-4e40-bee1-f6e3130ed733' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "GetImage", controller = "Images"}. Executing action ImageGallery.API.Controllers.ImagesController.GetImage (ImageGallery.API)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of authorization filters (in the following order): Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of exception filters (in the following order): None
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.EntityFrameworkCore.Infrastructure:Information: Entity Framework Core 2.2.3-servicing-35854 initialized 'GalleryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Query:Debug: Compiling query model:
+'(from Image i in DbSet<Image>
+where [i].Id == __id_0 && [i].OwnerId == __ownerId_1
+select [i]).Any()'
+Microsoft.EntityFrameworkCore.Query:Debug: Optimized query model:
+'(from Image i in DbSet<Image>
+where [i].Id == __id_0 && [i].OwnerId == __ownerId_1
+select [i]).Any()'
+Microsoft.EntityFrameworkCore.Query:Debug: (QueryContext queryContext) => IEnumerable<bool> _InterceptExceptions(
+|__ source: IEnumerable<bool> _ToSequence(() => bool GetResult(
+|   |__ valueBuffers: IEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext,
+|   |   |__ shaperCommandContext: SelectExpression:
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Images] AS [i]
+|   |                   WHERE ([i].[Id] = @__id_0) AND ([i].[OwnerId] = @__ownerId_1))
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END),
+|   |__ throwOnNullResult: False)),
+|__ contextType: ImageGallery.API.Entities.GalleryContext,
+|__ logger: DiagnosticsLogger<Query>,
+|__ queryContext: queryContext)
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid), @__ownerId_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Images] AS [i]
+        WHERE ([i].[Id] = @__id_0) AND ([i].[OwnerId] = @__ownerId_1))
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (78ms) [Parameters=[@__id_0='?' (DbType = Guid), @__ownerId_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Images] AS [i]
+        WHERE ([i].[Id] = @__id_0) AND ([i].[OwnerId] = @__ownerId_1))
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Attempting to bind parameter 'id' of type 'System.Guid' ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder:Debug: Attempting to bind model of type 'System.Guid' using the name 'id' in request data ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder:Debug: Done attempting to bind model of type 'System.Guid' using the name 'id'.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Done attempting to bind parameter 'id' of type 'System.Guid'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.API.Controllers.ImagesController.GetImage (ImageGallery.API) with arguments (2645bd94-3624-43fc-b21f-1209d730fc71) - Validation state: Valid
+Microsoft.EntityFrameworkCore.Query:Debug: Compiling query model:
+'(from Image i in DbSet<Image>
+where [i].Id == __id_0
+select [i]).FirstOrDefault()'
+Microsoft.EntityFrameworkCore.Query:Debug: Optimized query model:
+'(from Image i in DbSet<Image>
+where [i].Id == __id_0
+select [i]).FirstOrDefault()'
+Microsoft.EntityFrameworkCore.Query:Debug: (QueryContext queryContext) => IEnumerable<Image> _InterceptExceptions(
+|__ source: IEnumerable<Image> _TrackEntities(
+|   |__ results: IEnumerable<Image> _ToSequence(() => Image FirstOrDefault(IEnumerable<Image> _ShapedQuery(
+|   |   |__ queryContext: queryContext,
+|   |   |__ shaperCommandContext: SelectExpression:
+|   |   |       SELECT TOP(1) [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+|   |   |       FROM [Images] AS [i]
+|   |   |       WHERE [i].[Id] = @__id_0,
+|   |   |__ shaper: (MaterializationContext materializationContext) =>
+|   |       {
+|   |           instance = new Image()
+|   |           instance.<Id>k__BackingField = Guid TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Image.Id)
+|   |           instance.<FileName>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Image.FileName)
+|   |           instance.<OwnerId>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Image.OwnerId)
+|   |           instance.<Title>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, Image.Title)
+|   |           return instance
+|   |       }))),
+|   |__ queryContext: queryContext,
+|   |__ entityTrackingInfos: { itemType: Image },
+|   |__ entityAccessors: List<Func<Image, object>>
+|       {
+|           Func<Image, Image>,
+|       }),
+|__ contextType: ImageGallery.API.Entities.GalleryContext,
+|__ logger: DiagnosticsLogger<Query>,
+|__ queryContext: queryContext)
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @__id_0
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (78ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @__id_0
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.API.Controllers.ImagesController.GetImage (ImageGallery.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 107.7867ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Attempting to select an output formatter based on Accept header 'application/json'.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor:Information: Executing ObjectResult, writing value of type 'ImageGallery.Model.Image'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.API.Controllers.ImagesController.GetImage (ImageGallery.API) in 351.009ms
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" completed keep alive response.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client), returned result Microsoft.AspNetCore.Mvc.ViewResult in 524.7064ms.
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: 'GalleryContext' disposed.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 502.4242ms 200 application/json; charset=utf-8
+
+QQHQ :: *RENDER EDIT PAGE
+
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executing ViewResult, running view EditImage.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executed ViewResult - view EditImage executed in 56.2837ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client) in 609.3774ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 630.1269ms 200 text/html; charset=utf-8
+
+QQHQ :: EDIT PAGE SHOWN...SAVE EDIT
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 POST http://localhost:44393/Gallery/EditImage/2645bd94-3624-43fc-b21f-1209d730fc71 application/x-www-form-urlencoded 252
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "EditImage", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client) with arguments (ImageGallery.Client.ViewModels.EditImageViewModel) - Validation state: Valid
+
+QQHQ :: API :: PUT EDIT IMAGE
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 PUT http://localhost:44329/api/images/2645bd94-3624-43fc-b21f-1209d730fc71 application/json; charset=utf-16 64
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Trace: All hosts are allowed.
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware:Debug: PUT requests are not supported
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: HandleAuthenticateAsync called
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token found: 0b81931232f3f7e27d1d927de97cfcbfb3f8f574fb6d4a2cf78d256565eb0994
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token is a reference token and is supported.
+IdentityModel.AspNetCore.OAuth2Introspection.OAuth2IntrospectionHandler:Debug: AuthenticationScheme: BearerIdentityServerAuthenticationIntrospection was successfully authenticated.
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Debug: AuthenticationScheme: Bearer was successfully authenticated.
+Microsoft.AspNetCore.Routing.Tree.TreeRouter:Debug: Request successfully matched the route with name 'GetImage' and template 'api/images/{id}'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.GetImage (ImageGallery.API)' with id 'b829b9a4-061f-443b-b31f-f1bbbec28452' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.DeleteImage (ImageGallery.API)' with id 'f4aa5060-4df7-415a-9821-60ef432ca5e5' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "UpdateImage", controller = "Images"}. Executing action ImageGallery.API.Controllers.ImagesController.UpdateImage (ImageGallery.API)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of authorization filters (in the following order): Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter, Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of exception filters (in the following order): None
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.EntityFrameworkCore.Infrastructure:Information: Entity Framework Core 2.2.3-servicing-35854 initialized 'GalleryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid), @__ownerId_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Images] AS [i]
+        WHERE ([i].[Id] = @__id_0) AND ([i].[OwnerId] = @__ownerId_1))
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Guid), @__ownerId_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Images] AS [i]
+        WHERE ([i].[Id] = @__id_0) AND ([i].[OwnerId] = @__ownerId_1))
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Attempting to bind parameter 'id' of type 'System.Guid' ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder:Debug: Attempting to bind model of type 'System.Guid' using the name 'id' in request data ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder:Debug: Done attempting to bind model of type 'System.Guid' using the name 'id'.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Done attempting to bind parameter 'id' of type 'System.Guid'.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Attempting to bind parameter 'imageForUpdate' of type 'ImageGallery.Model.ImageForUpdate' ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder:Debug: Attempting to bind model of type 'ImageGallery.Model.ImageForUpdate' using the name '' in request data ...
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder:Debug: Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'application/json; charset=utf-16'.
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder:Debug: Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json; charset=utf-16'.
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE", Request id "0HLN57RE39RCE:00000004": started reading request body.
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE", Request id "0HLN57RE39RCE:00000004": done reading request body.
+Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder:Debug: Done attempting to bind model of type 'ImageGallery.Model.ImageForUpdate' using the name ''.
+Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder:Debug: Done attempting to bind parameter 'imageForUpdate' of type 'ImageGallery.Model.ImageForUpdate'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.API.Controllers.ImagesController.UpdateImage (ImageGallery.API) with arguments (2645bd94-3624-43fc-b21f-1209d730fc71, ImageGallery.Model.ImageForUpdate) - Validation state: Valid
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @__id_0
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @__id_0
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges starting for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Unchanged 'Image.Title' detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: DetectChanges completed for 'GalleryContext'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Beginning transaction with isolation level 'ReadCommitted'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Images] SET [Title] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (53ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Images] SET [Title] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Committing transaction.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Transaction:Debug: Disposing transaction.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: An 'Image' entity tracked by 'GalleryContext' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Update:Debug: SaveChanges completed for 'GalleryContext' with 1 entities written to the database.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.API.Controllers.ImagesController.UpdateImage (ImageGallery.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 179.5662ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Before executing action result Microsoft.AspNetCore.Mvc.NoContentResult.
+Microsoft.AspNetCore.Mvc.StatusCodeResult:Information: Executing HttpStatusCodeResult, setting HTTP status code 204
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: After executing action result Microsoft.AspNetCore.Mvc.NoContentResult.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.API.Controllers.ImagesController.UpdateImage (ImageGallery.API) in 390.9645ms
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" completed keep alive response.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 553.653ms.
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: 'GalleryContext' disposed.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 522.6265ms 204
+
+QQHQ :: *REDIRECT TO HOME PAGE
+
+Microsoft.AspNetCore.Mvc.RedirectToActionResult:Information: Executing RedirectResult, redirecting to /.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.EditImage (ImageGallery.Client) in 577.8454ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 589.7156ms 302
+
+QQHQ :: *REQUEST HOME PAGE
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "Index", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) - Validation state: Valid
+================================ OIDC IDENTITY TOKEN INFO ======================================
+Identity token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjAzOGRiNTljYmM4ZDAxOWI1MjQ1YzNhODIzYWM5MTg3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NTkyNDg3ODUsImV4cCI6MTU1OTI0OTA4NSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMTQiLCJhdWQiOiJpbWFnZWdhbGxlcnljbGllbnQiLCJub25jZSI6IjYzNjk0ODQ1NTY2MTk3MTEzMS5PRGxpTlRnd01XTXRPRE15TXkwMFlUZGtMVGc1WVRjdFpqTXlOekk1TXpZMlpHUXpZekV5WXpFNE1EZ3RNamswWXkwME1qbG1MV0ZtWm1NdE1XRTNaalZtTW1Vek9UVm0iLCJpYXQiOjE1NTkyNDg3ODUsImF0X2hhc2giOiJxU21pb2ZsUWwxVThhamczZFJXd0ZRIiwic2lkIjoiYWI5NDJhZmYyMzc2NDkzOGE0NmI0ZjljZTY5ZjhhODgiLCJzdWIiOiJiNzUzOTY5NC05N2U3LTRkZmUtODRkYS1iNDI1NmUxZmY1YzciLCJhdXRoX3RpbWUiOjE1NTkyNDg3NzksImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.m2F7QJXtWVbhQzQLp4p-oPT2q9-BEgm9vRqW67hLjKrLC38vvoIQGZseqxi-YtoBPkr8Z0eIHSjD8GQXLMKpvQu8UTSj-Tslwi6i6dMBP95NWbJMyoSnrrJNbOf_Wr97mztuD6dArskLNoQQ1wecS3gQFpC2-q68kR7_rfoWMJJkcvgHQtjIT8S6zIsOOW0p1OZqp8mtwSOQajorQxVEM0Yt2nYAE5pSFO9Wm-nWLTHuG6KHkAuqSmTnzY99l40WSnulEeq92vjQg4uWvRs3mtcYO9VKHfWadn6QheGBK27toR_QbKQggTSisUK_2WX5mXgYJtuutqisPp7EgJ2awg
+Claim type: sub - Claim value: b7539694-97e7-4dfe-84da-b4256e1ff5c7
+Claim type: amr - Claim value: pwd
+Claim type: given_name - Claim value: Claire
+Claim type: family_name - Claim value: Underwood
+Claim type: role - Claim value: PayingUser
+Claim type: country - Claim value: be
+Claim type: subscriptionlevel - Claim value: PayingUser
+================================ OIDC IDENTITY TOKEN INFO ======================================
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44329/api/images
+Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware:Trace: All hosts are allowed.
+Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware:Debug: The request path /api/images does not match a supported file type
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: HandleAuthenticateAsync called
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token found: 0b81931232f3f7e27d1d927de97cfcbfb3f8f574fb6d4a2cf78d256565eb0994
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Trace: Token is a reference token and is supported.
+IdentityModel.AspNetCore.OAuth2Introspection.OAuth2IntrospectionHandler:Debug: AuthenticationScheme: BearerIdentityServerAuthenticationIntrospection was successfully authenticated.
+IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler:Debug: AuthenticationScheme: Bearer was successfully authenticated.
+Microsoft.AspNetCore.Routing.Tree.TreeRouter:Debug: Request successfully matched the route with name '(null)' and template 'api/images'
+Microsoft.AspNetCore.Mvc.Internal.ActionSelector:Debug: Action 'ImageGallery.API.Controllers.ImagesController.CreateImage (ImageGallery.API)' with id '5fb89cc3-8714-49c9-9e26-bd85c57e4818' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "GetImages", controller = "Images"}. Executing action ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of authorization filters (in the following order): Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of exception filters (in the following order): None
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Debug: Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: Before executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Authorization Filter: After executing OnAuthorizationAsync on filter Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API) - Validation state: Valid
+Microsoft.EntityFrameworkCore.Infrastructure:Information: Entity Framework Core 2.2.3-servicing-35854 initialized 'GalleryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opening connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Opened connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: Executing DbCommand [Parameters=[@__ownerId_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[OwnerId] = @__ownerId_0
+ORDER BY [i].[Title]
+Microsoft.EntityFrameworkCore.Database.Command:Information: Executed DbCommand (63ms) [Parameters=[@__ownerId_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileName], [i].[OwnerId], [i].[Title]
+FROM [Images] AS [i]
+WHERE [i].[OwnerId] = @__ownerId_0
+ORDER BY [i].[Title]
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.ChangeTracking:Debug: Context 'GalleryContext' started tracking 'Image' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Microsoft.EntityFrameworkCore.Database.Command:Debug: A data reader was disposed.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closing connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.EntityFrameworkCore.Database.Connection:Debug: Closed connection to database 'ImageGalleryDB' on server '(localdb)\mssqllocaldb'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 93.9169ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Attempting to select an output formatter based on Accept header 'application/json'.
+Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector:Debug: Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
+Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor:Information: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ImageGallery.Model.Image, ImageGallery.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Trace: Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.API.Controllers.ImagesController.GetImages (ImageGallery.API) in 180.9169ms
+Microsoft.AspNetCore.Server.Kestrel:Debug: Connection id "0HLN57RE39RCE" completed keep alive response.
+Microsoft.EntityFrameworkCore.Infrastructure:Debug: 'GalleryContext' disposed.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client), returned result Microsoft.AspNetCore.Mvc.ViewResult in 311.1392ms.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executing ViewResult, running view Index.
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 305.8117ms 200 application/json; charset=utf-8
+
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor:Information: Executed ViewResult - view Index executed in 6.9577ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) in 331.6608ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 338.6441ms 200 text/html; charset=utf-8
+
+QQHQ :: HOME SHOWN AFTER EDIT...REQUEST LOGOUT
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/Gallery/Logout
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "Logout", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.Logout (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization was successful.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executing action method ImageGallery.Client.Controllers.GalleryController.Logout (ImageGallery.Client) - Validation state: Valid
+Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler:Information: AuthenticationScheme: Cookies signed out.
+Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler:Information: AuthenticationScheme: oidc signed out.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action method ImageGallery.Client.Controllers.GalleryController.Logout (ImageGallery.Client), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 256.9525ms.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.Logout (ImageGallery.Client) in 264.4166ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 276.3838ms 302
+
+QQHQ :: *RETURN FROM LOGOUT
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/signout-callback-oidc?state=CfDJ8HghKrsNTG1Ijn_2fLmnscusMQTtQnua24R1l9Eiq0R9kVvzyDJub2-yAiXrNoYVBZ490kxWp1FVtnPDhr6jmcFJPyR69lUrhUj2j100uQ5IKXOutWndLSNVCRnZNbCgFl26Eee05D7RB1ZzZ_OR5JFOwkaXWarUMtb8zhq4ticx
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 4.7269ms 302
+
+QQHQ :: *REDIRECT TO HOME
+
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:44393/
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Route matched with {action = "Index", controller = "Gallery"}. Executing action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client)
+Microsoft.AspNetCore.Authorization.DefaultAuthorizationService:Information: Authorization failed.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+Microsoft.AspNetCore.Mvc.ChallengeResult:Information: Executing ChallengeResult with authentication schemes ().
+Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler:Information: AuthenticationScheme: oidc was challenged.
+Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker:Information: Executed action ImageGallery.Client.Controllers.GalleryController.Index (ImageGallery.Client) in 9.0392ms
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 20.2261ms 302
+
+QQHQ :: LOGIN PAGE SHOWN

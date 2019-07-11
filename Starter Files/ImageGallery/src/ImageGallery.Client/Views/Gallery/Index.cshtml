@@ -1,14 +1,15 @@
-﻿@model ImageGallery.Client.ViewModels.GalleryIndexViewModel
+﻿@using ImageGallery.Model
+@model ImageGallery.Client.ViewModels.GalleryIndexViewModel
 
 <div class="bottomMarginDefault">
 </div>
 
 <div class="container">
-    @foreach (var item in Model.Images)
+    @foreach (Image item in Model.Images)
     {
         <div class="pull-left col-md-4">
             <div>
-                <img class="thumbnailImage" src="@("http://localhost:1601/images/" + item.FileName)" />
+                <img class="thumbnailImage" src="@("https://localhost:44329/images/" + item.FileName)" />
             </div>
             <div>
                 <div class="h5">@item.Title</div>
@@ -19,4 +20,4 @@
             </div>
         </div>
     }
-</div> 
+</div>

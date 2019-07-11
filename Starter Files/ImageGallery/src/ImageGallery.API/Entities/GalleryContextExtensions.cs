@@ -14,7 +14,7 @@ namespace ImageGallery.API.Entities
             context.SaveChanges();
 
             // init seed data
-            var images = new List<Image>()
+            List<Image> images = new List<Image>()
             {
                 new Image()
                 {

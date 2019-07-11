@@ -12,20 +12,20 @@ namespace ImageGallery.API
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
+            IWebHost host = BuildWebHost(args);
 
             // migrate & seed the database.  Best practice = in Main, using service scope
-            using (var scope = host.Services.CreateScope())
+            using (IServiceScope scope = host.Services.CreateScope())
             {
                 try
                 {
-                    var context = scope.ServiceProvider.GetService<GalleryContext>();
+                    GalleryContext context = scope.ServiceProvider.GetService<GalleryContext>();
                     context.Database.Migrate();
                     context.EnsureSeedDataForContext();
                 }
                 catch (Exception ex)
                 {
-                    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+                    ILogger<Program> logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred while migrating or seeding the database.");
                 }
             }
