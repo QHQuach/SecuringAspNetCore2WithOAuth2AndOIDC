@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
@@ -99,18 +100,18 @@ namespace Marvin.IDP
 
                 new IdentityResources.Address(), // QQHQ :: CLAIMS :: Additional claims
                 new IdentityResource(
-                    "roles", // QQHQ :: Scope name
-                    "Your role(s)", // Desc
+                    "scope.role", // QQHQ :: Scope name
+                    "Your role", // Desc
                     new List<string>() { "role" } // Claim type to return
                 ),
 
                 // QQHQ :: ABAC
                 new IdentityResource(
-                    "country",
+                    "scope.country", // QQHQ :: Scope name
                     "The country you are living in",
                     new List<string>() { "country" }),
                 new IdentityResource(
-                    "subscriptionlevel",
+                    "scope.subscriptionlevel", // QQHQ :: Scope name
                     "Your subscription level",
                     new List<string>() { "subscriptionlevel" }),
             };
@@ -128,7 +129,14 @@ namespace Marvin.IDP
                 new ApiResource(
                         "FinanceWebAPI",
                         "Finance Web API",
-                        new List<string>() { "role" }) // Claim types
+                        new List<string>()      // Claim types are constructor level
+                        {
+                            JwtClaimTypes.Role,
+                            JwtClaimTypes.GivenName,
+                            JwtClaimTypes.Address,
+                            "country",
+                            "subscriptionlevel",
+                        })
                     {
                         // QQHQ :: REFTOKEN
                         ApiSecrets = { new Secret("FinanceWebAPI-Token-Secret".Sha256()) }
@@ -137,11 +145,20 @@ namespace Marvin.IDP
                 // QQHQ :: API
                 new ApiResource(
                         "imagegalleryapi",
-                        "Image Gallery API",
-                        new List<string>() { "role" }) // Claim types
+                        "Image Gallery API")
                     {
                         // QQHQ :: REFTOKEN
-                        ApiSecrets = { new Secret("API-Token-Secret".Sha256()) }
+                        ApiSecrets = { new Secret("API-Token-Secret".Sha256()) },
+
+                        // Claim types
+                        UserClaims =
+                        {
+                            JwtClaimTypes.Role,
+                            JwtClaimTypes.GivenName,
+                            JwtClaimTypes.Address,
+                            "country",
+                            "subscriptionlevel",
+                        }
                     },
             };
         }
@@ -160,7 +177,7 @@ namespace Marvin.IDP
                     ClientName = "FE Web API Caller",
                     ClientId = "FEWebAPI",
 
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
 
                     AllowedScopes =
                     {
@@ -170,22 +187,21 @@ namespace Marvin.IDP
 
                         // QQHQ :: CLAIMS
                         IdentityServerConstants.StandardScopes.Address, // QQHQ :: Mapping to additional claim
-                        "roles", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
+                        "scope.role", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
 
                         // QQHQ :: API :: Names of API that this client has access to
                         "imagegalleryapi",
                         "FinanceWebAPI",
 
                         // QQHQ :: ABAC
-                        "country",
-                        "subscriptionlevel",
+                        "scope.country",
+                        "scope.subscriptionlevel",
                     },
 
                     ClientSecrets =
                     {
                         new Secret("FEWebAPI-Token-Secret".Sha256())
                     }
-
                 },
 
                 // QQHQ :: GW
@@ -197,7 +213,7 @@ namespace Marvin.IDP
 
                     // QQHQ :: REFTOKEN :: Token will be just an identifier (e.g. 5f3a13dcbc2b1b21359a53a92889ab5f3fc614a9bb5337b35df2bdc833ff3bca)
                     // Extra trip to the Identity Server will be done for the validation
-                    AccessTokenType = AccessTokenType.Reference,
+                    //AccessTokenType = AccessTokenType.Reference,
 
                     // QQHQ :: EXPI
                     //IdentityTokenLifetime = ....,  // Default 300 sec/5 min as is
@@ -229,15 +245,15 @@ namespace Marvin.IDP
 
                         // QQHQ :: CLAIMS
                         IdentityServerConstants.StandardScopes.Address, // QQHQ :: Mapping to additional claim
-                        "roles", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
+                        "scope.role", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
 
                         // QQHQ :: API :: Names of API that this client has access to
                         "imagegalleryapi",
                         "FinanceWebAPI",
 
                         // QQHQ :: ABAC
-                        "country",
-                        "subscriptionlevel",
+                        "scope.country",
+                        "scope.subscriptionlevel",
                     },
 
                     ClientSecrets =
@@ -285,14 +301,14 @@ namespace Marvin.IDP
 
                         // QQHQ :: CLAIMS
                         IdentityServerConstants.StandardScopes.Address, // QQHQ :: Mapping to additional claim
-                        "roles", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
+                        "scope.role", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
 
                         // QQHQ :: API :: Matching with API resource name
                         "imagegalleryapi",
 
                         // QQHQ :: ABAC
-                        "country",
-                        "subscriptionlevel",
+                        "scope.country",
+                        "scope.subscriptionlevel",
                     },
 
                     ClientSecrets =

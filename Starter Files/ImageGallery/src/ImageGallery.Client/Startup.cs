@@ -143,7 +143,8 @@ namespace ImageGallery.Client
                     options.ClaimActions.MapUniqueJsonKey("country", "country");
                     options.ClaimActions.MapUniqueJsonKey("subscriptionlevel", "subscriptionlevel");
 
-                    // QQHQ :: ROLES :: Defines how validation of a token should happen. This allows role to be part of user for checking in the front end
+                    // QQHQ :: ROLES :: Returning claim data for a claim-based validation
+                    // (e.g. role check to be part of user for validation in the front end
                     options.TokenValidationParameters = new TokenValidationParameters()
                     {
                         NameClaimType = JwtClaimTypes.GivenName,
