@@ -171,11 +171,11 @@ namespace Marvin.IDP
         {
             return new List<Client>()
             {
-                // QQHQ :: Finance Web API Service
+                // QQHQ :: Web API Caller
                 new Client()
                 {
-                    ClientName = "FE Web API Caller",
-                    ClientId = "FEWebAPI",
+                    ClientName = "Web API Caller",
+                    ClientId = "WebAPICaller",
 
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
 
@@ -200,7 +200,7 @@ namespace Marvin.IDP
 
                     ClientSecrets =
                     {
-                        new Secret("FEWebAPI-Token-Secret".Sha256())
+                        new Secret("WebAPICaller-Token-Secret".Sha256())
                     }
                 },
 
