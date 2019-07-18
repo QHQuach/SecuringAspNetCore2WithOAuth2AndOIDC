@@ -20,7 +20,7 @@ namespace Marvin.IDP
             // QQHQ :: SERVER :: Use IdentityServer
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
-                .AddTestUsers(Config.GetUsers())
+                .AddTestUsers(Config.GetUsers()) // QQHQ :: IDENTITY :: Test IProfileService and IResourceOwnerPasswordValidator will also be injected (http://docs.identityserver.io/en/latest/topics/startup.html?highlight=IResourceOwnerPasswordValidator#test-stores)
                 .AddInMemoryIdentityResources(Config.GetIdentityResources()) // QQHQ :: IDENTITY
                 .AddInMemoryApiResources(Config.GetApiResources()) // QQHQ :: API
                 .AddInMemoryClients(Config.GetClients());
