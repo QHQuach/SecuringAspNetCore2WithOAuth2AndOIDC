@@ -11,6 +11,23 @@ using Marvin.IDP;
 
 namespace IdentityProvider.Custom
 {
+    public static class CustomGrantType
+    {
+        public static string ApiTokenRequest = "api_token_request";
+    }
+
+    public class CustomGrantTypes
+    {
+        public static ICollection<string> ResourceOwnersAndClientCredentials =>
+            new[] { CustomGrantType.ApiTokenRequest, GrantType.ResourceOwnerPassword, GrantType.ClientCredentials };
+
+        public static ICollection<string> ApiTokenRequestAndClientCredentials =>
+            new[] { CustomGrantType.ApiTokenRequest, GrantType.ClientCredentials };
+
+        public static ICollection<string> ApiTokenRequest =>
+            new[] { CustomGrantType.ApiTokenRequest };
+    }
+
     public class ApiTokenRequestGrantValidator : IExtensionGrantValidator
     {
         private readonly ITokenValidator _validator;
@@ -20,7 +37,7 @@ namespace IdentityProvider.Custom
             _validator = validator;
         }
 
-        public string GrantType => "api_token_request";
+        public string GrantType => CustomGrantType.ApiTokenRequest;
 
         public async Task ValidateAsync(ExtensionGrantValidationContext context)
         {

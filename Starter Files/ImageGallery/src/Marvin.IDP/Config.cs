@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using IdentityModel;
+using IdentityProvider.Custom;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
@@ -182,7 +183,7 @@ namespace Marvin.IDP
                         new Secret("WebAPITokenRequester-Token-Secret".Sha256())
                     },
 
-                    AllowedGrantTypes = { "api_token_request" },
+                    AllowedGrantTypes = CustomGrantTypes.ApiTokenRequest,
 
                     AllowOfflineAccess = true,
                     //AbsoluteRefreshTokenLifetime = ...  // Default 30 days
@@ -220,7 +221,12 @@ namespace Marvin.IDP
                         new Secret("WebAPICaller-Token-Secret".Sha256())
                     },
 
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
+                    AllowedGrantTypes = CustomGrantTypes.ResourceOwnersAndClientCredentials,
+
+                    AllowOfflineAccess = true,
+                    //AbsoluteRefreshTokenLifetime = ...  // Default 30 days
+                    //RefreshTokenExpiration = ... // Default Absolute
+                    UpdateAccessTokenClaimsOnRefresh = true,
 
                     AllowedScopes =
                     {
