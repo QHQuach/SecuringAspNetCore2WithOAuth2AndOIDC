@@ -171,11 +171,54 @@ namespace Marvin.IDP
         {
             return new List<Client>()
             {
+                // QQHQ :: Web API Token Requester
+                new Client()
+                {
+                    ClientName = "Web API Token Requester",
+                    ClientId = "WebAPITokenRequester",
+
+                    ClientSecrets =
+                    {
+                        new Secret("WebAPITokenRequester-Token-Secret".Sha256())
+                    },
+
+                    AllowedGrantTypes = { "api_token_request" },
+
+                    AllowOfflineAccess = true,
+                    //AbsoluteRefreshTokenLifetime = ...  // Default 30 days
+                    //RefreshTokenExpiration = ... // Default Absolute
+                    UpdateAccessTokenClaimsOnRefresh = true,
+
+                    AllowedScopes =
+                    {
+                        // QQHQ :: SCOPES :: Subset of what supported scopes specified in the IS through identity resource list
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+
+                        // QQHQ :: CLAIMS
+                        IdentityServerConstants.StandardScopes.Address, // QQHQ :: Mapping to additional claim
+                        "scope.role", // QQHQ :: Scope name for mapping into a customer identity resource for customer claim
+
+                        // QQHQ :: API :: Names of API that this client has access to
+                        "imagegalleryapi",
+                        "FinanceWebAPI",
+
+                        // QQHQ :: ABAC
+                        "scope.country",
+                        "scope.subscriptionlevel",
+                    }
+                },
+
                 // QQHQ :: Web API Caller
                 new Client()
                 {
                     ClientName = "Web API Caller",
                     ClientId = "WebAPICaller",
+
+                    ClientSecrets =
+                    {
+                        new Secret("WebAPICaller-Token-Secret".Sha256())
+                    },
 
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
 
@@ -196,11 +239,6 @@ namespace Marvin.IDP
                         // QQHQ :: ABAC
                         "scope.country",
                         "scope.subscriptionlevel",
-                    },
-
-                    ClientSecrets =
-                    {
-                        new Secret("WebAPICaller-Token-Secret".Sha256())
                     }
                 },
 
@@ -209,6 +247,12 @@ namespace Marvin.IDP
                 {
                     ClientName = "FE Gateway", // QQHQ :: CONSENT :: Display on the Consent page
                     ClientId = "FEGateway",
+
+                    ClientSecrets =
+                    {
+                        new Secret("FEGateway-Token-Secret".Sha256())
+                    },
+
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials, // QQHQ :: Server-side web app
 
                     // QQHQ :: REFTOKEN :: Token will be just an identifier (e.g. 5f3a13dcbc2b1b21359a53a92889ab5f3fc614a9bb5337b35df2bdc833ff3bca)
@@ -254,11 +298,6 @@ namespace Marvin.IDP
                         // QQHQ :: ABAC
                         "scope.country",
                         "scope.subscriptionlevel",
-                    },
-
-                    ClientSecrets =
-                    {
-                        new Secret("FEGateway-Token-Secret".Sha256())
                     }
                 },
 
@@ -267,6 +306,12 @@ namespace Marvin.IDP
                 {
                     ClientName = "Image Gallery", // QQHQ :: CONSENT :: Display on the Consent page
                     ClientId = "imagegalleryclient",
+
+                    ClientSecrets =
+                    {
+                        new Secret("Client-Token-Secret".Sha256())
+                    },
+
                     AllowedGrantTypes = GrantTypes.Hybrid, // QQHQ :: Server-side web app
 
                     // QQHQ :: REFTOKEN :: Token will be just an identifier (e.g. 5f3a13dcbc2b1b21359a53a92889ab5f3fc614a9bb5337b35df2bdc833ff3bca)
@@ -309,11 +354,6 @@ namespace Marvin.IDP
                         // QQHQ :: ABAC
                         "scope.country",
                         "scope.subscriptionlevel",
-                    },
-
-                    ClientSecrets =
-                    {
-                        new Secret("Client-Token-Secret".Sha256())
                     }
                 }
             };

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityProvider.Custom;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -23,7 +24,8 @@ namespace Marvin.IDP
                 .AddTestUsers(Config.GetUsers()) // QQHQ :: IDENTITY :: Test IProfileService and IResourceOwnerPasswordValidator will also be injected (http://docs.identityserver.io/en/latest/topics/startup.html?highlight=IResourceOwnerPasswordValidator#test-stores)
                 .AddInMemoryIdentityResources(Config.GetIdentityResources()) // QQHQ :: IDENTITY
                 .AddInMemoryApiResources(Config.GetApiResources()) // QQHQ :: API
-                .AddInMemoryClients(Config.GetClients());
+                .AddInMemoryClients(Config.GetClients())
+                .AddExtensionGrantValidator<ApiTokenRequestGrantValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
